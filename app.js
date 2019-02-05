@@ -1,14 +1,14 @@
-const PORT = 8000;
-const WebSocketServer = require("ws").Server;
-const http = require("http");
-const express = require("express");
+var PORT = 8000;
+var WebSocketServer = require("ws").Server;
+var http = require("http");
+var express = require("express");
 
-let app = express();
+var app = express();
 app.use(express.static(__dirname + "/"));
-let server = http.createServer(app);
-let wss = new WebSocketServer({server: server});
+var server = http.createServer(app);
+var wss = new WebSocketServer({server: server});
 
-let connections = [];
+var connections = [];
 
 /**
  * WebSocket接続 / 送信時のイベント設定
@@ -21,7 +21,7 @@ wss.on("connection", function (ws) {
 			return (conn === ws) ? false: true;
 		});
 	});
-	
+
 	ws.on("message", function(message) {
 		console.log(message);
 		broadcastMessage(JSON.stringify(message));
