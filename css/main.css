@@ -1,0 +1,66 @@
+/*style*/
+html, body {
+	color: #000000;
+	background: #000000;
+}
+
+body {
+	margin:0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+section {
+	width: 1280px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+section div {
+	position: absolute;
+	margin: 0 auto;
+	width: 1280px;
+	height: 100%;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	width: auto;
+	height: 100%;
+}
+
+#testButton {
+	position: fixed;
+}
+
+.fadeinAction{
+    -webkit-animation:fadein 0.7s ease-in-out forwards;
+    animation:fadein 0.7s ease-in-out forwards;
+}
+
+@-webkit-keyframes fadein{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes fadein{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.fadeoutAction{
+    -webkit-animation:fadeout 0.7s ease-in-out forwards;
+    animation:fadeout 0.7s ease-in-out forwards;
+}
+
+@-webkit-keyframes fadeout{
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes fadeout{
+    0% {opacity:1;}
+    100% {opacity:0;}
+}

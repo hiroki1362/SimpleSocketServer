@@ -1,0 +1,15 @@
+{
+  "name": "signagesocket",
+  "version": "1.0.0",
+  "description": "WebSocket for Pepper with degital signage",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Hiroki Fujioka (infodex co.)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "ws": "^6.1.3"
+  }
+}
